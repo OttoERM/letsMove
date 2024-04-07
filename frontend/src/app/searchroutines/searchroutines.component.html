@@ -1,0 +1,86 @@
+<main class="appSearchroutinesContainer">
+  <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
+    <symbol id="add" viewBox="0 0 448 512">
+      <path
+        d="M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32V224H48c-17.7 0-32 14.3-32 32s14.3 32 32 32H192V432c0 17.7 14.3 32 32 32s32-14.3 32-32V288H400c17.7 0 32-14.3 32-32s-14.3-32-32-32H256V80z"
+      />
+    </symbol>
+    <symbol id="info" viewBox="0 0 448 512">
+      <path
+        opacity="1"
+        fill="#1E3050"
+        d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM216 336h24V272H216c-13.3 0-24-10.7-24-24s10.7-24 24-24h48c13.3 0 24 10.7 24 24v88h8c13.3 0 24 10.7 24 24s-10.7 24-24 24H216c-13.3 0-24-10.7-24-24s10.7-24 24-24zm40-208a32 32 0 1 1 0 64 32 32 0 1 1 0-64z"
+      />
+    </symbol>
+  </svg>
+
+  <section id="modalContainer" [ngStyle]="{ visibility: showModal }">
+    <div id="modalContent">
+      <div>
+        <span class="close" (click)="showModal = 'hidden'">&times;</span>
+        <h3>{{ modalDetails.title }}</h3>
+      </div>
+      <div>
+        <p>{{ modalDetails.description }}</p>
+      </div>
+      <div id="modalData">
+        <div>
+          <h5>Ejercicios</h5>
+          <ul>
+            @for(exercise of modalDetails.exercises; track exercise.activity){
+            <li>{{ exercise.activity }} - {{ exercise.directions }}</li>
+            }
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <h1>Buscar rutinas</h1>
+
+  <section class="searchBarContainer">
+    <div class="input-group">
+      <input
+        type="search"
+        class="form-control rounded searchBar"
+        placeholder="Search"
+        aria-label="Search"
+        aria-describedby="search-addon"
+        #searchBox
+        id="search-box"
+        (input)="search(searchBox.value)"
+      />
+    </div>
+  </section>
+
+  <section class="myroutinesContainer">
+    @for(workout of routines; track workout._id){
+    <div class="routineCard">
+      <img src="/assets/dumbbell-solid.svg" class="card-img-top" alt="..." />
+      <div class="cardBody">
+        <h5 class="cardTitle">{{ workout.title }}</h5>
+        @if(workout.authorInfo){
+        <p class="card-text">{{ workout.authorInfo[0].username }}</p>
+        } @else {
+        <p class="card-text">-</p>
+        }
+        <button
+          class="getDetails"
+          (click)="
+            showDetails(workout.title, workout.description, workout.exercises)
+          "
+        >
+          <svg class="bi pe-none me-2" width="32" height="28">
+            <use xlink:href="#info" />
+          </svg>
+        </button>
+        <button class="addToMyroutines" (click)="addToMyWorkouts(workout._id)">
+          <svg class="bi pe-none me-2" width="32" height="28">
+            <use xlink:href="#add" />
+          </svg>
+        </button>
+      </div>
+    </div>
+    }
+  </section>
+</main>

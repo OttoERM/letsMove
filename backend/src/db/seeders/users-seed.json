@@ -1,0 +1,99 @@
+{
+    "name": "users",
+    "content": [
+        {
+            "_id": "653c4a2793aa95a235053eb6",
+            "username": "AdminUser",
+            "password": "$2b$10$RYsc9lrUp5n7cQECPRykpO3JhYczbwP8up1uKslqZPqZJCSTj3j9W",
+            "role": "admin"
+        },
+        {
+            "_id": "653c4a2793aa95a235053eb7",
+            "username": "Carl",
+            "password": "$2b$10$uHxb58XhCRFvy4iw/S/VE.Ql5P3xDEFTWch5lgCIUsCID2Xbz/DtC",
+            "role": "trainer"
+        },
+        {
+            "_id": "653c4a2793aa95a235053eb8",
+            "username": "Mary",
+            "password": "$2b$10$kPZ2x/Q2hCZHCfySHUe4Ju3eAzpnRuXefeRC5kEJKAkIlIuncOn4.",
+            "role": "trainer"
+        },
+        {
+            "_id": "653c4a2793aa95a235053eb9",
+            "username": "Peter",
+            "password": "$2b$10$RVyp7TqYYOwGY.PS/78gQ.w0XGuG5vwBF9BpkCvm6zNk4MXZ2bP4W",
+            "role": "trainer"
+        },
+        {
+            "_id": "653c4a2793aa95a235053eba",
+            "username": "Clayton",
+            "password": "$2b$10$F1.RpKREmlsKDfXYwU5qDOq4nTKrgHi50JCeqfVJigqybOSO0m4fe",
+            "role": "user",
+            "workoutsIds": [
+                "653df2a2d6e9a923cc1e0f82",
+                "653df2a2d6e9a923cc1e0f86",
+                "653df2a2d6e9a923cc1e0f87"
+            ],
+            "calendarId": "653fc27b9a450d7c9e5e3464"
+        },
+        {
+            "_id": "653c5dbc93aa95a235053ec0",
+            "username": "Rose",
+            "password": "$2b$10$pA1WEtH6akMCYYaFGRdpIey0T0ajJrMCuRuuqaAnOHIhgXRq2TOM6",
+            "role": "user",
+            "workoutsIds": [
+                "653df2a2d6e9a923cc1e0f84",
+                "653df2a2d6e9a923cc1e0f87"
+            ],
+            "calendarId": "653fc27b9a450d7c9e5e345c"
+        },
+        {
+            "_id": "653c5dbc93aa95a235053ec1",
+            "username": "Amul",
+            "password": "$2b$10$IuyTMhEHE.zHhP0pG8.RE.nGonbGztHUBtFRidkMfCV.jT3FSfvwe",
+            "role": "user",
+            "workoutsIds": [
+                "653df2a2d6e9a923cc1e0f86",
+                "653df2a2d6e9a923cc1e0f81",
+                "653df2a2d6e9a923cc1e0f88"
+            ],
+            "calendarId": "653fc27b9a450d7c9e5e345d"
+        },
+        {
+            "_id": "653c5dbc93aa95a235053ec2",
+            "username": "Jeison",
+            "password": "$2b$10$TJY3EvzzZkgG1g4e36mMyOXVQFqE.TtdPemnT35AHqh72KVhdLvb2",
+            "role": "user",
+            "workoutsIds": [
+                "653df2a2d6e9a923cc1e0f88",
+                "653df2a2d6e9a923cc1e0f83",
+                "653df2a2d6e9a923cc1e0f81",
+                "653df2a2d6e9a923cc1e0f85"
+            ],
+            "calendarId": "653fc27b9a450d7c9e5e345e"
+        },
+        {
+            "_id": "653c5dbc93aa95a235053ec4",
+            "username": "Freddy",
+            "password": "$2b$10$wG7bWWy32nGzQQQbBGf4WuaI3waLtqbgjlYBpTStijCOmxTQP3MgK",
+            "role": "user",
+            "workoutsIds": [
+                "653df2a2d6e9a923cc1e0f81",
+                "653df2a2d6e9a923cc1e0f85"
+            ],
+            "calendarId": "653fc27b9a450d7c9e5e345f"
+        },
+        {
+            "_id": "653c5dbc93aa95a235053ec3",
+            "username": "Sofia",
+            "password": "$2b$10$sz8j.oWI/R576bbGPyUTJOxxv/gFN/WOH0XTX4qxvcVMkjhOOa3lq",
+            "role": "user",
+            "workoutsIds": [
+                "653df2a2d6e9a923cc1e0f83",
+                "653df2a2d6e9a923cc1e0f86"
+            ],
+            "calendarId": "653fc27b9a450d7c9e5e3460"
+        }
+    ]
+}

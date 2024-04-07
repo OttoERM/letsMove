@@ -1,0 +1,55 @@
+.appChatsContainer {
+  height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  gap: 1rem;
+}
+
+.appChatsContainer > h1 {
+  margin-left: 1rem;
+  flex-basis: 100%;
+}
+
+.appChatsContainer ul {
+  padding: 0;
+}
+
+.listNone {
+  list-style-type: none;
+}
+
+.chatsContainer {
+  /* height: 28rem; */
+  flex-basis: 20%;
+  margin-left: 3rem;
+  font-size: larger;
+  overflow-y: auto;
+  scrollbar-gutter: stable;
+}
+
+.chat {
+  margin-bottom: 1rem;
+  border: 2px solid gray;
+  text-align: center;
+  background-color: hsl(30, 25%, 89%);
+}
+
+.messageWrapper {
+  flex-basis: 70%;
+}
+
+.messagesContainer {
+  height: 26rem;
+  overflow-y: auto;
+  scrollbar-gutter: stable;
+  background-color: rgba(248, 249, 250, 1);
+}
+
+.writeMessageContainer {
+  flex-basis: 100%;
+}
+
+.writeMessage {
+  display: inline-block;
+}

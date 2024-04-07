@@ -1,0 +1,262 @@
+{
+    "name": "workouts",
+    "content": [
+        {
+            "_id": "653df2a2d6e9a923cc1e0f81",
+            "title": "Ponte musculoso con estos 5 ejercicios",
+            "description": "Ejercicios generales para brazos, abdominales y piernas",
+            "author": "653c4a2793aa95a235053eb9",
+            "tags": [
+                "principiante",
+                "brazos",
+                "abdominales",
+                "piernas"
+            ],
+            "createdAt": "2023-10-27",
+            "exercises": [
+                {
+                    "activity": "Flexiones",
+                    "directions": "8 repeticiones"
+                },
+                {
+                    "activity": "Plank",
+                    "directions": "Posicion de plank durante 1 minuto"
+                },
+                {
+                    "activity": "Sentadillas",
+                    "directions": "15 sentadillas"
+                },
+                {
+                    "activity": "Crunch Abdominales",
+                    "directions": "15 sentadillas"
+                },
+                {
+                    "activity": "Burpees",
+                    "directions": "8 repeticiones"
+                }
+            ]
+        },
+        {
+            "_id": "653df2a2d6e9a923cc1e0f82",
+            "title": "Ejercicios para pectorales",
+            "description": "Desarolla los pectorales de Arnold",
+            "author": "653c4a2793aa95a235053eb8",
+            "tags": [
+                "pecho",
+                "principiante"
+            ],
+            "createdAt": "2023-10-28",
+            "exercises": [
+                {
+                    "activity": "Flexion con inclinacion (Apoyo de brazos)",
+                    "directions": "6 repeticiones"
+                },
+                {
+                    "activity": "Flexiones",
+                    "directions": "8 repeticiones"
+                },
+                {
+                    "activity": "Flexiones con brazos abiertos",
+                    "directions": "6 repeticiones"
+                },
+                {
+                    "activity": "Triceps en silla",
+                    "directions": "4 repeticiones"
+                },
+                {
+                    "activity": "Flexiones con apoyo de rodillas",
+                    "directions": "6 repeticiones"
+                }
+            ]
+        },
+        {
+            "_id": "653df2a2d6e9a923cc1e0f83",
+            "title": "Abdominales marcados facil",
+            "description": "Obtiene abdominales de forma rapida y sencilla",
+            "author": "653c4a2793aa95a235053eb8",
+            "tags": [
+                "abdominales",
+                "facil",
+                "crunch"
+            ],
+            "createdAt": "2023-10-29",
+            "exercises": [
+                {
+                    "activity": "Crunch abdominales",
+                    "directions": "8 repeticiones"
+                },
+                {
+                    "activity": "Twist Ruso",
+                    "directions": "20 repeticiones"
+                },
+                {
+                    "activity": "Escalada de montaña",
+                    "directions": "16 repeticiones"
+                },
+                {
+                    "activity": "Elevaciones de piernas",
+                    "directions": "16 repeticiones"
+                }
+            ]
+        },
+        {
+            "_id": "653df2a2d6e9a923cc1e0f84",
+            "title": "Brazos de hercules",
+            "description": "Brazotes grandes y marcados con 4 simples ejercicios",
+            "author": "653c4a2793aa95a235053eb9",
+            "tags": [
+                "brazos",
+                "hercules",
+                "intermedio"
+            ],
+            "createdAt": "2023-10-28",
+            "exercises": [
+                {
+                    "activity": "Flexiones",
+                    "directions": "16 repeticiones"
+                },
+                {
+                    "activity": "Flexiones en diamante",
+                    "directions": "14 repeticiones"
+                },
+                {
+                    "activity": "Burpees",
+                    "directions": "10 repeticiones"
+                },
+                {
+                    "activity": "Fondos militares",
+                    "directions": "12 repeticiones"
+                }
+            ]
+        },
+        {
+            "_id": "653df2a2d6e9a923cc1e0f85",
+            "title": "Desarrolla piernas de futbolista",
+            "description": "Ejercicios para piernas",
+            "author": "653c4a2793aa95a235053eb7",
+            "tags": [
+                "piernas",
+                "saltos",
+                "futbol"
+            ],
+            "createdAt": "2023-10-28",
+            "exercises": [
+                {
+                    "activity": "Burpees",
+                    "directions": "10 repeticiones"
+                },
+                {
+                    "activity": "Squats",
+                    "directions": "14 repeticiones"
+                },
+                {
+                    "activity": "Descanso",
+                    "directions": "1 minuto"
+                },
+                {
+                    "activity": "Squats",
+                    "directions": "14 repeticiones"
+                },
+                {
+                    "activity": "Sentadillas con saltos",
+                    "directions": "14 repeticiones"
+                }
+            ]
+        },
+        {
+            "_id": "653df2a2d6e9a923cc1e0f86",
+            "title": "Abdominales de Zeus",
+            "description": "Lleva tus abdominales al otro nivel con estos ejercicios",
+            "author": "653c4a2793aa95a235053eb9",
+            "tags": [
+                "abdominales",
+                "avanzado",
+                "crunch"
+            ],
+            "createdAt": "2023-10-28",
+            "exercises": [
+                {
+                    "activity": "Abdominales",
+                    "directions": "20 repeticiones"
+                },
+                {
+                    "activity": "Crunch abdominales",
+                    "directions": "30 repeticiones"
+                },
+                {
+                    "activity": "Descanso",
+                    "directions": "1 minuto"
+                },
+                {
+                    "activity": "Crunch en bicicleta",
+                    "directions": "20 repeticiones"
+                },
+                {
+                    "activity": "Toque al talon",
+                    "directions": "34 repeticiones"
+                }
+            ]
+        },
+        {
+            "_id": "653df2a2d6e9a923cc1e0f87",
+            "title": "Ejercicios para pecho intermedio",
+            "description": "Rutina de ejercicios: Flexiones, flexiones con brazos abiertos, flexiones hindues, etc.",
+            "author": "653c4a2793aa95a235053eb9",
+            "tags": [
+                "intermedio",
+                "flexiones",
+                "pecho",
+                "flexiones hindues"
+            ],
+            "createdAt": "2023-10-28",
+            "exercises": [
+                {
+                    "activity": "Flexiones",
+                    "directions": "12 repeticiones"
+                },
+                {
+                    "activity": "Flexiones con brazos abiertos",
+                    "directions": "16 repeticiones"
+                },
+                {
+                    "activity": "Flexiones hindues",
+                    "directions": "10 repeticiones"
+                },
+                {
+                    "activity": "Flexiones con inclinacion (apoyo de piernas)",
+                    "directions": "12 repeticiones"
+                }
+            ]
+        },
+        {
+            "_id": "653df2a2d6e9a923cc1e0f88",
+            "title": "Rutina para cardio",
+            "description": "Te quedas sin aliento al subir las escaleras, no puedes trotar durante 5 minutos? entonces esta rutina es para ti.",
+            "author": "653c4a2793aa95a235053eb7",
+            "tags": [
+                "cardio",
+                "facil",
+                "calentamiento"
+            ],
+            "createdAt": "2023-10-29",
+            "exercises": [
+                {
+                    "activity": "Salto de cuerda",
+                    "directions": "3 minutos"
+                },
+                {
+                    "activity": "Burpees",
+                    "directions": "5 repeticiones"
+                },
+                {
+                    "activity": "Saltos de tijera",
+                    "directions": "2 minutos"
+                },
+                {
+                    "activity": "Trote suave",
+                    "directions": "8 minutos"
+                }
+            ]
+        }
+    ]
+}

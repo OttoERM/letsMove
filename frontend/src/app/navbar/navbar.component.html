@@ -1,0 +1,202 @@
+<main class="appNavbarContainer">
+  <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
+    <symbol id="letsmove" viewBox="0 0 640 512">
+      <title>LetsMove</title>
+      <path
+        d="M349.4 44.6c5.9-13.7 1.5-29.7-10.6-38.5s-28.6-8-39.9 1.8l-256 224c-10 8.8-13.6 22.9-8.9 35.3S50.7 288 64 288H175.5L98.6 467.4c-5.9 13.7-1.5 29.7 10.6 38.5s28.6 8 39.9-1.8l256-224c10-8.8 13.6-22.9 8.9-35.3s-16.6-20.7-30-20.7H272.5L349.4 44.6z"
+      />
+    </symbol>
+    <symbol id="table" viewBox="0 0 16 16">
+      <path
+        d="M0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2zm15 2h-4v3h4V4zm0 4h-4v3h4V8zm0 4h-4v3h3a1 1 0 0 0 1-1v-2zm-5 3v-3H6v3h4zm-5 0v-3H1v2a1 1 0 0 0 1 1h3zm-4-4h4V8H1v3zm0-4h4V4H1v3zm5-3v3h4V4H6zm4 4H6v3h4V8z"
+      />
+    </symbol>
+    <symbol id="people-circle" viewBox="0 0 16 16">
+      <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
+      <path
+        fill-rule="evenodd"
+        d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"
+      />
+    </symbol>
+    <symbol id="thumbbell" viewBox="0 0 640 512">
+      <path
+        d="M96 64c0-17.7 14.3-32 32-32h32c17.7 0 32 14.3 32 32V224v64V448c0 17.7-14.3 32-32 32H128c-17.7 0-32-14.3-32-32V384H64c-17.7 0-32-14.3-32-32V288c-17.7 0-32-14.3-32-32s14.3-32 32-32V160c0-17.7 14.3-32 32-32H96V64zm448 0v64h32c17.7 0 32 14.3 32 32v64c17.7 0 32 14.3 32 32s-14.3 32-32 32v64c0 17.7-14.3 32-32 32H544v64c0 17.7-14.3 32-32 32H480c-17.7 0-32-14.3-32-32V288 224 64c0-17.7 14.3-32 32-32h32c17.7 0 32 14.3 32 32zM416 224v64H224V224H416z"
+      />
+    </symbol>
+    <symbol id="search" viewBox="0 0 640 512">
+      <path
+        d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"
+      />
+    </symbol>
+    <symbol id="plus" viewBox="0 0 640 512">
+      <path
+        d="M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32V224H48c-17.7 0-32 14.3-32 32s14.3 32 32 32H192V432c0 17.7 14.3 32 32 32s32-14.3 32-32V288H400c17.7 0 32-14.3 32-32s-14.3-32-32-32H256V80z"
+      />
+    </symbol>
+  </svg>
+
+  <div
+    class="d-flex flex-column flex-shrink-0 p-3 bg-body-tertiary linksContainer"
+  >
+    <a
+      href="/"
+      class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none"
+    >
+      <svg class="bi pe-none me-2" width="40" height="32">
+        <use xlink:href="#letsmove" />
+      </svg>
+      <span class="fs-4" id="appTitle">LetsMove</span>
+    </a>
+    <hr />
+    <ul class="nav nav-pills flex-column mb-auto">
+      @if(role == 'user'){
+      <li class="nav-item">
+        <a
+          href="#"
+          [ngClass]="
+            linksMap.get('calendar')
+              ? 'nav-link active'
+              : 'nav-link link-body-emphasis'
+          "
+          aria-current="page"
+          (click)="controlActiveButton('calendar')"
+          routerLink="calendar"
+        >
+          <svg class="bi pe-none me-2" width="16" height="16">
+            <use xlink:href="#table" />
+          </svg>
+          Mi Calendario
+        </a>
+      </li>
+      <li>
+        <a
+          href="#"
+          [ngClass]="
+            linksMap.get('myroutines')
+              ? 'nav-link active'
+              : 'nav-link link-body-emphasis'
+          "
+          (click)="controlActiveButton('myroutines')"
+          routerLink="myroutines"
+        >
+          <svg class="bi pe-none me-2" width="16" height="24">
+            <use xlink:href="#thumbbell" />
+          </svg>
+          Mis rutinas
+        </a>
+      </li>
+      <li>
+        <a
+          href="#"
+          [ngClass]="
+            linksMap.get('searchroutines')
+              ? 'nav-link active'
+              : 'nav-link link-body-emphasis'
+          "
+          (click)="controlActiveButton('searchroutines')"
+          routerLink="searchroutines"
+        >
+          <svg class="bi pe-none me-2" width="16" height="16">
+            <use xlink:href="#search" />
+          </svg>
+          Buscar rutinas
+        </a>
+      </li>
+      <li>
+        <a
+          href="#"
+          [ngClass]="
+            linksMap.get('chats')
+              ? 'nav-link active'
+              : 'nav-link link-body-emphasis'
+          "
+          (click)="controlActiveButton('chats')"
+          routerLink="chats"
+        >
+          <svg class="bi pe-none me-2" width="16" height="16">
+            <use xlink:href="#people-circle" />
+          </svg>
+          Chats
+        </a>
+      </li>
+      } @if(role == 'trainer'){
+      <li>
+        <a
+          href="#"
+          [ngClass]="
+            linksMap.get('myworkouts')
+              ? 'nav-link active'
+              : 'nav-link link-body-emphasis'
+          "
+          (click)="controlActiveButton('myworkouts')"
+          routerLink="myworkouts"
+        >
+          <svg class="bi pe-none me-2" width="16" height="24">
+            <use xlink:href="#thumbbell" />
+          </svg>
+          Mis entrenamientos
+        </a>
+      </li>
+      <li>
+        <a
+          href="#"
+          [ngClass]="
+            linksMap.get('createworkout')
+              ? 'nav-link active'
+              : 'nav-link link-body-emphasis'
+          "
+          (click)="controlActiveButton('createworkout')"
+          routerLink="createworkout"
+        >
+          <svg class="bi pe-none me-2" width="16" height="24">
+            <use xlink:href="#plus" />
+          </svg>
+          Crear rutina
+        </a>
+      </li>
+      <li>
+        <a
+          href="#"
+          [ngClass]="
+            linksMap.get('chats')
+              ? 'nav-link active'
+              : 'nav-link link-body-emphasis'
+          "
+          (click)="controlActiveButton('chats')"
+          routerLink="chats"
+        >
+          <svg class="bi pe-none me-2" width="16" height="16">
+            <use xlink:href="#people-circle" />
+          </svg>
+          Chats
+        </a>
+      </li>
+      }
+    </ul>
+    <hr />
+    <div class="dropdown">
+      <a
+        href="#"
+        class="d-flex align-items-center link-body-emphasis text-decoration-none dropdown-toggle"
+        data-bs-toggle="dropdown"
+        aria-expanded="false"
+      >
+        <img
+          src="https://github.com/mdo.png"
+          alt=""
+          width="32"
+          height="32"
+          class="rounded-circle me-2"
+        />
+        <strong>mdo</strong>
+      </a>
+      <ul class="dropdown-menu text-small shadow">
+        <li><a class="dropdown-item" href="#">New project...</a></li>
+        <li><a class="dropdown-item" href="#">Settings</a></li>
+        <li><a class="dropdown-item" href="#">Profile</a></li>
+        <li><hr class="dropdown-divider" /></li>
+        <li><a class="dropdown-item" href="#">Sign out</a></li>
+      </ul>
+    </div>
+  </div>
+</main>

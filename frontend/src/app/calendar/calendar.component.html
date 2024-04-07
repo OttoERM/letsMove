@@ -1,0 +1,225 @@
+<main class="appCalendarContainer">
+  <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
+    <symbol id="trash" viewBox="0 0 448 512">
+      <path
+        d="M135.2 17.7L128 32H32C14.3 32 0 46.3 0 64S14.3 96 32 96H416c17.7 0 32-14.3 32-32s-14.3-32-32-32H320l-7.2-14.3C307.4 6.8 296.3 0 284.2 0H163.8c-12.1 0-23.2 6.8-28.6 17.7zM416 128H32L53.2 467c1.6 25.3 22.6 45 47.9 45H346.9c25.3 0 46.3-19.7 47.9-45L416 128z"
+      />
+    </symbol>
+  </svg>
+
+  <section id="modalContainer" [ngStyle]="{ visibility: showModal }">
+    <div id="modalContent">
+      <div>
+        <span class="close" (click)="showModal = 'hidden'">&times;</span>
+        <h3>{{ modal.title }}</h3>
+      </div>
+      <div id="modalData">
+        <div class="form-floating routineInput routineTitle">
+          <input
+            type="text"
+            class="form-control setPadding"
+            id="floatingInput"
+            placeholder="xxxxx"
+            autocomplete="off"
+            name="title"
+            [formControl]="modal.time"
+            (input)="setModalTime()"
+          />
+          <label for="floatingInput">Hora</label>
+        </div>
+        <button class="deleteFromMyCalendar" (click)="removeCalendar()">
+          <svg class="bi pe-none me-2" width="32" height="28">
+            <use xlink:href="#trash" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <h1>Mi calendario</h1>
+  <section class="calendarContainer">
+    <section class="calendar">
+      <div class="calendarDays">
+        <div class="dayWorkouts">
+          <div class="day">
+            <p>Domingo</p>
+            <hr />
+          </div>
+          <ul
+            class="scheduledWorkouts"
+            id="su"
+            #routineSu
+            (dragenter)="dropRoutineEnter($event)"
+            (dragover)="dropRoutineOver($event)"
+            (drop)="dropRoutine($event)"
+          >
+            @for(routine of masterCalendar.calendar.su; track routine.workout!){
+            <li
+              class="scheduleWorkout"
+              (mouseup)="findSelected($event, routineSu)"
+            >
+              {{ routine.time }}
+            </li>
+            }
+          </ul>
+        </div>
+        <div class="dayWorkouts">
+          <div class="day">
+            <p>Lunes</p>
+            <hr />
+          </div>
+          <ul
+            class="scheduledWorkouts"
+            id="mo"
+            #routineMo
+            (dragenter)="dropRoutineEnter($event)"
+            (dragover)="dropRoutineOver($event)"
+            (drop)="dropRoutine($event)"
+          >
+            @for(routine of masterCalendar.calendar.mo; track routine.workout){
+            <li
+              class="scheduleWorkout"
+              (click)="findSelected($event, routineMo)"
+            >
+              {{ routine.time }}
+            </li>
+            }
+          </ul>
+        </div>
+        <div class="dayWorkouts">
+          <div class="day">
+            <p>Martes</p>
+            <hr />
+          </div>
+          <ul
+            class="scheduledWorkouts"
+            id="tu"
+            #routineTu
+            (dragenter)="dropRoutineEnter($event)"
+            (dragover)="dropRoutineOver($event)"
+            (drop)="dropRoutine($event)"
+          >
+            @for(routine of masterCalendar.calendar.tu; track routine.workout){
+            <li
+              class="scheduleWorkout"
+              (click)="findSelected($event, routineTu)"
+            >
+              {{ routine.time }}
+            </li>
+            }
+          </ul>
+        </div>
+        <div class="dayWorkouts">
+          <div class="day">
+            <p>Miercoles</p>
+            <hr />
+          </div>
+          <ul
+            class="scheduledWorkouts"
+            id="we"
+            #routineWe
+            (dragenter)="dropRoutineEnter($event)"
+            (dragover)="dropRoutineOver($event)"
+            (drop)="dropRoutine($event)"
+          >
+            @for(routine of masterCalendar.calendar.we; track routine.workout){
+            <li
+              class="scheduleWorkout"
+              (click)="findSelected($event, routineWe)"
+            >
+              {{ routine.time }}
+            </li>
+            }
+          </ul>
+        </div>
+        <div class="dayWorkouts">
+          <div class="day">
+            <p>Jueves</p>
+            <hr />
+          </div>
+          <ul
+            class="scheduledWorkouts"
+            id="th"
+            #routineTh
+            (dragenter)="dropRoutineEnter($event)"
+            (dragover)="dropRoutineOver($event)"
+            (drop)="dropRoutine($event)"
+          >
+            @for(routine of masterCalendar.calendar.th; track routine.workout){
+            <li
+              class="scheduleWorkout"
+              (click)="findSelected($event, routineTh)"
+            >
+              {{ routine.time }}
+            </li>
+            }
+          </ul>
+        </div>
+        <div class="dayWorkouts">
+          <div class="day">
+            <p>Viernes</p>
+            <hr />
+          </div>
+          <ul
+            class="scheduledWorkouts"
+            id="fr"
+            #routineFr
+            (dragenter)="dropRoutineEnter($event)"
+            (dragover)="dropRoutineOver($event)"
+            (drop)="dropRoutine($event)"
+          >
+            @for(routine of masterCalendar.calendar.fr; track routine.workout){
+            <li
+              class="scheduleWorkout"
+              (click)="findSelected($event, routineFr)"
+            >
+              {{ routine.time }}
+            </li>
+            }
+          </ul>
+        </div>
+        <div class="dayWorkouts">
+          <div class="day">
+            <p>Sabado</p>
+            <hr />
+          </div>
+          <ul
+            class="scheduledWorkouts"
+            id="sa"
+            #routineSa
+            (dragenter)="dropRoutineEnter($event)"
+            (dragover)="dropRoutineOver($event)"
+            (drop)="dropRoutine($event)"
+          >
+            @for(routine of masterCalendar.calendar.sa; track routine.workout){
+            <li
+              class="scheduleWorkout"
+              (click)="findSelected($event, routineSa)"
+            >
+              {{ routine.time }}
+            </li>
+            }
+          </ul>
+        </div>
+      </div>
+      <button class="btn btn-primary saveCalendar" (click)="save()">
+        Guardar
+      </button>
+    </section>
+    <section class="workoutsOptionContainer">
+      <h4>Mis rutinas</h4>
+      <ul class="workoutsOptions list-group" #myRoutines>
+        @for(routine of userInfo.workoutInfo; track routine._id) {
+        <li
+          class="list-group-item workoutsOption"
+          draggable="true"
+          (mousedown)="selectedRoutine($event, myRoutines)"
+          (dragstart)="dragStart()"
+        >
+          {{ routine.title }}
+        </li>
+        }
+      </ul>
+    </section>
+  </section>
+</main>

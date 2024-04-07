@@ -1,0 +1,63 @@
+.appMyroutinesContainer {
+  height: 100vh;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+}
+
+.appMyroutinesContainer > h1 {
+  margin-left: 1rem;
+  color: white;
+}
+
+.myroutinesContainer {
+  overflow-y: auto;
+  scrollbar-gutter: stable;
+  margin: 1rem 1rem 1rem 1rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr 1fr;
+  justify-items: center;
+  gap: 1rem;
+}
+
+.routineCard {
+  width: 75%;
+  border: 2px solid rgba(0, 0, 0, 0.175);
+  border-radius: 6px;
+  padding: 1rem;
+  background-color: hsl(30, 25%, 89%);
+}
+
+.cardTitle {
+  height: 2.8125rem;
+  font-size: 1.125rem;
+  display: grid;
+  align-items: center;
+}
+
+.cardBody {
+  width: 14rem;
+  position: relative;
+}
+.cardBody > p {
+  font-size: 1rem;
+  margin-bottom: 0.25rem;
+  color: white;
+}
+
+.cardBody > .deleteFromMyroutine {
+  position: absolute;
+  left: 85%;
+  bottom: 4%;
+  cursor: pointer;
+
+  /*Style buttons as anchor, we make this in order to prevent default from anchor tag and avoid user agent style*/
+  background: none !important;
+  border: none;
+  padding: 0 !important;
+  /*input has OS specific font-family*/
+  color: #069;
+  text-decoration: underline;
+  cursor: pointer;
+}

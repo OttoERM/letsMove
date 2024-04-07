@@ -1,0 +1,35 @@
+<main class="appChatsContainer">
+  <h1>Mis chats</h1>
+  <section class="chatsContainer">
+    <ul #userChats>
+      @for(chat of chats; track chat._id){
+      <li
+        class="chat listNone"
+        (click)="getSelectedChatIndex($event, userChats)"
+      >
+        {{ chat.username }}
+      </li>
+      }
+    </ul>
+  </section>
+  <section class="messageWrapper">
+    @if(talkingTo !== -1){
+    <div>
+      <H3>Chat de {{ chats[talkingTo].username }}</H3>
+    </div>
+    }
+    <div class="messagesContainer">
+      <ul>
+        @for(message of messages; track message._id){
+        <li>{{ message.message }}</li>
+        }
+      </ul>
+    </div>
+    <div class="writeMessageContainer">
+      <div class="writeMessage">
+        <input type="text" [formControl]="inputMessage" />
+      </div>
+      <button class="sendMessage" (click)="sendMessage()">Send</button>
+    </div>
+  </section>
+</main>

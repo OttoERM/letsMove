@@ -1,0 +1,30 @@
+{
+    "name": "chats",
+    "content": [
+        {
+            "emisor": "Sofia",
+            "receiver": "Peter",
+            "message": "Hola, tengo una consulta"
+        },
+        {
+            "emisor": "Peter",
+            "receiver": "Sofia",
+            "message": "Digame cual es su consulta"
+        },
+        {
+            "emisor": "Sofia",
+            "receiver": "Peter",
+            "message": "Existe algun limite de tiempo para completar la rutina?"
+        },
+        {
+            "emisor": "Sofia",
+            "receiver": "Mary",
+            "message": "Hola, Mary su rutina me parecio muy genial"
+        },
+        {
+            "emisor": "Mary",
+            "receiver": "Sofia",
+            "message": "Muchas gracias, cualquier consulta estoy a la orden"
+        }
+    ]
+}

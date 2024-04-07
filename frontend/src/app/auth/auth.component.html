@@ -1,0 +1,47 @@
+<main class="loginContainer">
+  <div class="form-signin w-100 m-auto">
+    <form [formGroup]="authForm" (ngSubmit)="login()">
+      <!-- <img
+          class="mb-4"
+          src="../assets/brand/bootstrap-logo.svg"
+          alt=""
+          width="72"
+          height="57"
+        /> -->
+      <h1 class="h3 mb-3 fw-normal">Welcome</h1>
+
+      <div class="form-floating">
+        <input
+          type="text"
+          class="form-control"
+          id="username"
+          placeholder="xxxxx"
+          autocomplete="off"
+          name="username"
+          formControlName="username"
+        />
+        <label for="floatingInput">User Name</label>
+      </div>
+      <div class="form-floating mt-2">
+        <input
+          type="password"
+          class="form-control"
+          id="floatingPassword"
+          name="password"
+          placeholder="password"
+          formControlName="password"
+        />
+        <label for="floatingPassword">Password</label>
+      </div>
+
+      <button class="btn btn-primary w-100 py-2" type="submit">Log in</button>
+      <button
+        class="btn btn-secondary w-100 py-2 mt-2"
+        type="button"
+        routerLink="/signin"
+      >
+        Sign in
+      </button>
+    </form>
+  </div>
+</main>

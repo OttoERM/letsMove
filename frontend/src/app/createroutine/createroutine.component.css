@@ -1,0 +1,108 @@
+.appCreateroutineContainer > h1 {
+  margin: 1rem 1rem auto 1rem;
+  color: white;
+}
+
+.createroutineContainer {
+  height: 100%;
+  display: grid;
+  grid-template-columns: 7fr 3fr;
+  justify-items: center;
+  align-items: center;
+}
+
+.createRoutine {
+  width: 95%;
+  height: 30rem;
+  border: 3px solid rgb(33, 37, 41);
+  border-radius: 4px;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  background-color: hsl(223, 31%, 20%);
+}
+
+.routineInput {
+  margin-top: 0.5rem;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+}
+
+.routineInput > textarea {
+  resize: none;
+}
+
+.routineExercise > label {
+  color: white;
+}
+
+.routineTitle {
+  width: 40%;
+}
+
+.routineExercise {
+  width: 35%;
+}
+
+.routineExercise:not(:first-child) {
+  margin-top: 0.5rem;
+}
+
+.exerciseControls {
+  margin: 1rem 1rem auto;
+  cursor: pointer;
+}
+
+.exerciseContainer {
+  display: grid;
+  justify-items: center;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  align-content: space-evenly;
+}
+
+.buttonsContainer {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  flex-wrap: nowrap;
+}
+
+.buttonsContainer > button {
+  width: 30%;
+  margin: 1rem;
+}
+
+.createWorkoutsContainer {
+  width: 19rem;
+  height: 32rem;
+}
+
+.workoutsContainer {
+  height: 29rem;
+  padding-right: 0.25rem;
+  scrollbar-gutter: stable;
+  overflow-x: hidden;
+  overflow-y: auto;
+  gap: 0.5rem;
+  border: 1px solid gray;
+  background-color: hsl(223, 31%, 20%);
+}
+
+.workoutsContainer > li:first-child {
+  margin-top: 0.5rem;
+}
+
+.workoutsContainer > li:last-child {
+  margin-bottom: 0.5rem;
+}
+
+.workout {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  flex: 0 0 auto;
+  height: 42px;
+  border: 1px solid #dee2e6;
+  border-radius: 3px;
+  margin-left: 1.25rem;
+}

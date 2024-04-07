@@ -1,0 +1,101 @@
+<main class="appCreateroutineContainer">
+  <h1>Crear entrenamiento</h1>
+  <div class="createroutineContainer">
+    <section class="createRoutine">
+      <div>
+        <div class="form-floating routineInput routineTitle">
+          <input
+            type="text"
+            class="form-control"
+            id="floatingInput"
+            placeholder="xxxxx"
+            autocomplete="off"
+            name="title"
+            [formControl]="workoutForm.controls.title"
+            style="padding-top: 3.125rem"
+          />
+          <label for="floatingInput">Titulo</label>
+        </div>
+        <div class="form-floating routineInput">
+          <textarea
+            class="form-control"
+            placeholder="Leave a comment here"
+            id="floatingTextarea"
+            [formControl]="workoutForm.controls.description"
+          ></textarea>
+          <label for="floatingTextarea">Descripcion</label>
+        </div>
+        <div class="form-floating routineInput">
+          <input
+            type="text"
+            class="form-control"
+            id="floatingInput"
+            placeholder="xxxxx"
+            autocomplete="off"
+            name="title"
+            [formControl]="tagsInput"
+          />
+          <label for="floatingTextarea">Etiquetas</label>
+        </div>
+      </div>
+      <div class="exerciseContainer">
+        <div class="routineExercise">
+          <label for="floatingInput">Actividad</label>
+          <input
+            class="form-control form-control-sm"
+            type="text"
+            placeholder="Ejm. Abdominales"
+            aria-label=".form-control-sm example"
+            [formControl]="activityInput"
+            (input)="setActivity()"
+          />
+        </div>
+        <div class="routineExercise">
+          <label for="floatingInput">Instrucciones</label>
+          <input
+            class="form-control form-control-sm"
+            type="text"
+            placeholder="Ejm. 12 repeticiones"
+            aria-label=".form-control-sm example"
+            [formControl]="directionsInput"
+            (input)="setDirection()"
+          />
+        </div>
+        <div>
+          <img
+            src="/assets/angle-left-solid.svg"
+            alt=""
+            class="exerciseControls"
+            (click)="decrementIndex()"
+          />
+          <img
+            src="/assets/angle-right-solid.svg"
+            alt=""
+            class="exerciseControls"
+            (click)="incrementIndex()"
+          />
+          <img
+            src="/assets/plus-solid.svg"
+            alt=""
+            class="exerciseControls"
+            (click)="createEmptyExercise()"
+          />
+        </div>
+      </div>
+      <div class="buttonsContainer">
+        <button class="btn btn-primary" (click)="save()">Guardar</button>
+        <button class="btn btn-danger" (click)="drop()">Descartar</button>
+      </div>
+    </section>
+    <section class="createWorkoutsContainer">
+      <h4>Ejercicios</h4>
+      <ul class="workoutsContainer list-group">
+        @for(exercise of exercises; track exercise.id){
+        <li class="list-group-item workout" (click)="editSelected(exercise.id)">
+          {{ exercise.activity }}
+        </li>
+        }
+      </ul>
+    </section>
+  </div>
+</main>

@@ -1,0 +1,29 @@
+.app-dashboard {
+  display: grid;
+  background-color: var(--mainBgBlue);
+  grid-template-columns: 1fr 4fr;
+  grid-template-areas:
+    "appNavbar content"
+    "appNavbar content"
+    "appNavbar content";
+
+  background-color: hsl(225, 21%, 49%);
+}
+
+.appNavbar {
+  grid-area: appNavbar;
+}
+
+.title {
+  grid-area: title;
+}
+
+.content {
+  grid-area: content;
+  position: relative;
+}
+
+.appCalendarModule {
+  display: block;
+  height: 100%;
+}
